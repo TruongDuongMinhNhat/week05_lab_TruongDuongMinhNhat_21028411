@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Account - Career Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="d-flex mb-3 align-items-center justify-content-around">
+        <a href="/home">Home</a>
+        <a href="#">View Account</a>
+        <a href="/home/login">Log out</a>
+    </div>
+    <div class="container-fluid">
+        <h3 class="text-center">Your Information Account</h3>
+        <div class="mb-3 d-flex align-items-center">
+            <label class="form-label col-3">ID Candidate:</label>
+            <label class="form-label col-5" th:text="${candidate.id}"></label>
+        </div>
+        <div class="mb-3 d-flex align-items-center">
+            <label class="form-label col-3">Candidate Name:</label>
+            <label class="form-label col-5" th:text="${candidate.fullName}"></label>
+        </div>
+        <div class="mb-3 d-flex align-items-center">
+            <label class="form-label col-3">Phone:</label>
+            <label class="form-label col-5" th:text="${candidate.phone}"></label>
+        </div>
+        <div class="mb-3 d-flex align-items-center">
+            <label class="form-label col-3">Date of birth:</label>
+            <label class="form-label col-5" th:text="${candidate.dob}"></label>
+        </div>
+        <div class="mb-3 d-flex align-items-center">
+            <label class="form-label col-3">Email:</label>
+            <label class="form-label col-5" th:text="${candidate.email}"></label>
+        </div>
+        <div class="mb-3 d-flex align-items-center">
+            <label class="form-label col-3">Street:</label>
+            <label class="form-label col-5" th:text="${candidate.address.street}"></label>
+        </div>
+        <div class="mb-3 d-flex align-items-center">
+            <label class="form-label col-3">City:</label>
+            <label class="form-label col-5" th:text="${candidate.address.city}"></label>
+        </div>
+        <div class="mb-3 d-flex align-items-center">
+            <label class="form-label col-3">Country:</label>
+            <label class="form-label col-5" th:text="${candidate.address.country}"></label>
+        </div>
+        <div class="mb-3 d-flex align-items-center">
+            <label class="form-label col-3">Number:</label>
+            <label class="form-label col-5" th:text="${candidate.address.number}"></label>
+        </div>
+        <div class="mb-3 d-flex align-items-center">
+            <label class="form-label col-3">Zip code:</label>
+            <label class="form-label col-5" th:text="${candidate.address.zipCode}"></label>
+        </div>
+        <form action="/candidate/update-account-candidate" method="get" class="text-center">
+            <button class="btn btn-primary">Update Account</button>
+        </form>
+    </div>
+</div>
+</body>
+
+</html>
